@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets';
+import FormattedDate from "./FormattedDate.astro";
+
+const { post } = Astro.props;
+---
+
+<li class="flex items-center w-full gap-x-4 p-4 rounded-sm bg-gray-50 dark:bg-navy-850">
+  <div class="p-1 min-w-fit rounded-md bg-gray-300 dark:bg-gray-500">
+    <a href={`/post/${post.slug}/`}>
+      <Image
+        class="object-cover h-40 w-40 rounded-md"
+        src={post.data.heroImage}
+        alt={post.data.title}
+        height="160"
+      />
+    </a>
+  </div>
+  <div class="grow text-neutral-900">
+    <a href={`/post/${post.slug}/`}
+      ><h4 class="text-2xl m-0 p-0 major-text-color">{post.data.title}</h4></a
+    >
+    <div class="text-xs">
+      <FormattedDate date={post.data.pubDate} />
+    </div>
+    <div class="text-base mt-2 minor-text-color">
+      {post.data.excerpt}
+    </div>
+  </div>
+</li>

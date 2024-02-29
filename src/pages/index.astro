@@ -1,0 +1,17 @@
+---
+import { getCollection } from "astro:content";
+import PostEntry from "@components/PostEntry.astro";
+import BaseLayout from "src/layouts/BaseLayout.astro";
+
+const posts = (await getCollection("post")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<BaseLayout>
+  <section>
+    <ul class="flex flex-wrap gap-8 list-none m-0 p-0">
+      {posts.map((post) => <PostEntry post={post} />)}
+    </ul>
+  </section>
+</BaseLayout>

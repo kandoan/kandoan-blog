@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import BaseLayout from "src/layouts/BaseLayout.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+
+type Props = CollectionEntry<"post">["data"];
+
+const { title, pubDate, heroImage, excerpt, description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description || excerpt}>
+  <article class="minor-text-color">
+    {
+      heroImage && (
+        <div class="max-w-2xl p-1 mx-auto rounded-md bg-gray-300 dark:bg-gray-500">
+          <Image
+            class="rounded-md block"
+            widths={[256, 512, 1024]}
+            src={heroImage}
+            alt=""
+          />{" "}
+        </div>
+      )
+    }
+    <div class="prose">
+      <div class="py-4 mt-8">
+        <h1 class="m-0 text-center text-6xl font-semibold major-text-color">
+          {title}
+        </h1>
+      </div>
+      <div class="text-sm flex justify-center border-t-2 major-border-color">
+        <div>
+          <FormattedDate date={pubDate} />
+        </div>
+      </div>
+      <div class="mt-12">
+        <slot />
+      </div>
+    </div>
+  </article>
+</BaseLayout>
