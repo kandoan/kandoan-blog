@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://kandoan.com/sitemap-index.xml
