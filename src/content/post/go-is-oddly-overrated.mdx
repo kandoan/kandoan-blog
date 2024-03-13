@@ -1,0 +1,86 @@
+---
+title: 'Go is oddly overrated'
+description: "Go is great. But is it great enough to justify its popularity? I don't think so."
+pubDate: '2024-03-11'
+heroImage: '../../assets/image/go-splash.webp'
+excerpt: "I'm not saying that Go is bad. Quite the opposite, Go is great. But is it great enough to justify its popularity? I don't think so."
+---
+
+We have so many great projects out there being made using Go, such as *Kubernetes* or *Prometheus*. 
+So I believe the language must also be great to have garnered such successes. But most of the successful names are from the CLI or infra/system world.
+Go's popularity didn't just stop just there though.
+Such as, it has spreaded to Backend development as well and the hype is still going very strong. This is the part where I don't understand at all.
+
+## What makes `Go` great to me
+
+![Go is great](../../assets/image/go-rainbow.webp)
+
+In my opinion, Go is a very cool language. It has so many features that's hard to find anywhere else.
+Or, at least those features aren't usually packed into one single language like Go.
+
+A Go project can be built into a standalone binary, which make it so easy to transport around or deploy and use. 
+There is no need to mess around to set up an environment before running the build artifact, like in JS or Python.
+You have a single binary that you can just run. And build speed is super fast too.
+
+It's a functional language at heart, which makes it much easier to approach than something like Java or C#. 
+It even sidestepped from the usual OOP concepts and instead leaning more toward a composition style of programming.
+While I don't hate OOP at all, all the inheritence stuff requires a lot of forward thinking and careful design in order to get it right. 
+But not a lot of people can do it right. So OOP projects tend to devolve into a hot pile of mess because of that. 
+That's why nowaday people always encourage `composition over inheritence` whenever possible.
+
+But unlike other functional languages, Go can actually do some low level stuff as well. 
+It's not as low as something like *C++*, that's for sure. But not many languages can reach that level anyway.
+Concurrency in Go is very convenient and easy as well, with its *Goroutine*.
+
+It comes with a lot of things out of the box. Such as, it has a built-in formatter, a test framework, even a benchmark tool.
+What you have to use 3rd-party libraries in other languages instead came with the language by default in Go.
+
+But the big part is, it's backed by *Google*! Naturally the clout is huge. People will line up just to be a part of it.
+The community became so enormous just because of that. It's very to reach out and to find help, when you have a problem.
+
+## What I don't like about it
+
+![Go is like a melting pot](../../assets/image/melting-pot.jpg)
+
+It's just my personal feeling so I could be wrong, but the language to me feels like it's that one kid in school who try too hard to be cool, you know?
+It has learned a lot from its predecessors so it can actually pull off some great feats. But what's the catch?
+
+It feels like the language is a big melting pot where the developers just try to throw anything they deemed cool into it 
+while disregard other basic things. It looks good. It may smell good too. But it tastes weird to me. 
+
+In fact, the language feels like it starts as someone's toy project, or a proof of concept just to prove some of the features work.
+So a lot of things are either missing or straight up a hassle to use because of neglectance. 
+It makes me feel very uncomfortable using it for an extended amount of time. 
+
+There used to be no `generic` (the one related to reusability) in the language. That's unacceptable for something came out in the modern days. 
+Luckily that they implemented it later on. But it made me think that the language wasn't actually well-thought-out at first.
+
+Error handling is super annoying. It's too explicit. While it debatably could be good,
+but man it is so annoying that I have to return and check `if err != nil` everytime.
+Then there is also `panic`, which imply an unexpected error that should terminate the app. 
+But you can catch the panic too?! That's kinda like exception in other languages!
+
+*Pointer is pain*. I understand that pointer has its use. But I had hoped that the implementation would be better in DX comparing to *C++*. 
+I had hoped that it is optional to use. But no, it's just like in *C++* where people sprinkle it everywhere possible.
+And similar to pointer in C++, the thing is a nightmare to look at (remember segfault?).
+
+For a modern functional language, it lacks a lot of the usual data manipulation such as `map` or `filter` in the standard lib too.
+Those things come up very often day to day so I have to write a lot more code because I have to implement them myself.
+
+## Why I think it's overrated
+
+Even after all these rants, I still believe that Go is a great language. 
+The reason I think it's overrated is because people try to use it *everywhere*, especially Backend!
+Even though the language is advertised as a general purpose language, all of its goodnesses seem to be better fitting for CLI or infra/system tools.
+
+All the downsides I mentioned make using it such a pain to me. Yes, it may have great performance and such.
+Yes, so many great tools out there were made using Go so the language must be good.
+But most of my problem is related to its DX. I'm not gonna feel happy using Go for my Backend job at all (unless the money is great, just kidding).
+
+I get its appeal, but maybe it's an aquired taste and I'm not there yet. Or maybe it's just not for me.
+
+Overall, I think Go should just stay where it's already good at. It shouldn't try to branch out too much. 
+It's in a similar vein to my other posts: *not everything has to be good at everything*.
+
+Maybe later down the line, the language can improve itself into a great general purpose language. I very much will welcome that future. But right now? 
+I don't think it's fully ready yet. And I don't like how people are trying to shove it into everywhere they can. You can doesn't mean you should!
